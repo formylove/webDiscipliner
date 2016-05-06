@@ -1,0 +1,19 @@
+
+{  
+  "name": "baiduBlocker",  
+  "manifest_version": 2,
+  "version": "0.0.1",  
+  "description": "for block the baidu add. Author:xuyang",  
+  "permissions": ["tabs", "http://*/", "https://*/"],
+   "icons": {  
+        "48": "hachiko.png"  
+    },  
+
+	 "content_scripts": [{
+	     "matches": ["http://www.baidu.com/*","https://www.baidu.com/*","http://bbs.csdn.net/*","http://www.renren.com/*","http://blog.csdn.net/*"], 
+	     "js": ["jquery.js", "content_script.js"], 
+	     "run_at": "document_end",
+	     "all_frames": true 
+	}]
+
+} 
